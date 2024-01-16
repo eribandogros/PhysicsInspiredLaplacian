@@ -24,7 +24,8 @@ int main(int argc, char* argv[]){
     }
     
     molecule m;
-    m.m_filename = argv[1];
+    m.m_filename = argv[1]; //Example: ../dataset/xyz-folder-train/train_0.npy
+    
     m.read_molecule();
     m.init();
     
@@ -54,15 +55,15 @@ int main(int argc, char* argv[]){
 
     g.init();
     
-    //Example: ../../dataset/xyz-folder-train/train_0.npy
-    char delim = '/';
-    std::string trim = m.m_filename;
-    trim.erase(0, trim.find(delim)+1);
-    trim.erase(0, trim.find(delim)+1);
-    trim.erase(0, trim.find(delim)+1);
-    trim.erase(trim.find(delim), trim.length()-1);
-    trim.erase(0, trim.find_last_of('-')+1);
-    m.elements = trim;
+    //for element specific file naming
+//    char delim = '/';
+//    std::string trim = m.m_filename;
+//    trim.erase(0, trim.find(delim)+1);
+//    trim.erase(0, trim.find(delim)+1);
+//    trim.erase(0, trim.find(delim)+1);
+//    trim.erase(trim.find(delim), trim.length()-1);
+//    trim.erase(0, trim.find_last_of('-')+1);
+//    m.elements = trim;
 
     hamiltonian h(g, m);
     h.m_num_eigenvalues = 20;
@@ -72,6 +73,7 @@ int main(int argc, char* argv[]){
     h.m_potential_option = *argv[4];
     
     h.calculate_potential();
+    
     h.matlabEIGS();
     
     return 0;

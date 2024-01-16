@@ -386,7 +386,7 @@ void hamiltonian::matlabEIGS(){
     // other naming options...
 //    std::string fname = "features/features_" + trim_name + "_" +  std::to_string(m_eta_option) + ".txt";
 //    std::string fname = "features/L"+ std::to_string(order) + "/";
-    std::string fname = "../../features";
+    std::string fname = "../features";
 //    fname += m_dataset;
 //    fname += "/" + std::to_string(m_eta_option) + "/" + trim_name + ".txt";
 //    fname += "/" + m_m.elements + "/" + trim_name + ".txt";
