@@ -54,7 +54,7 @@ def parse_args(args):
     parser = argparse.ArgumentParser(description='Collect .txt feature files into single .npy')
 
     parser.add_argument('--dataset_name', default='dataset', type=str)
-    parser.add_argument('--compound_list_file', default='list_train.txt', type=str,                         help='Compound ids of a given dataset')
+    parser.add_argument('--compound_list_file', default='list_train.txt', type=str, help='Compound ids of a given dataset')
     parser.add_argument('--trim', action='store_true', default=False)
 
     args = parser.parse_args()
