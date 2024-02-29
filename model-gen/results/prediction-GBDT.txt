@@ -1,0 +1,1 @@
+mcc=0.626460 accuracy=0.816406 precision=0.769912 roc_auc_score=0.888326 sensitivity=0.805556 specificity=0.824324
